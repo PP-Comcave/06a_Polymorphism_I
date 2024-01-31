@@ -7,12 +7,9 @@ public class App {
         Queen queen = new Queen();
         Worker worker = new Worker();
 
-        output(queen.doYourJob());
-        output(drone.doYourJob());
-        output(worker.doYourJob());
-        output(queen.fly());
-        output(drone.fly());
-        output(worker.fly());
+        poolObj(drone);
+        poolObj(worker);
+        poolObj(queen);
 
     }
 
@@ -20,7 +17,10 @@ public class App {
     private static void output(String outputStr) {
         System.out.println(outputStr);
     }
-
+    private static void poolObj(HoneyBee obj){
+        output(obj.doYourJob());
+        output(obj.fly());
+    }
 
 }
 
